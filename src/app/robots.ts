@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://cortex-analytics-hub.github.io/sitemap.xml",
+    sitemap: "https://cortex-analytics-india.github.io/sitemap.xml",
   };
 }
