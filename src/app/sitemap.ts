@@ -3,7 +3,7 @@ import { projects } from "@/content/projects";
 
 export const dynamic = "force-static";
 
-const BASE_URL = "https://pravindatir.github.io/Cortex-website";
+const BASE_URL = "https://cortex-analytics-hub.github.io";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const projectRoutes = projects.map((project) => ({
