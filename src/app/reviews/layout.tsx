@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 const title = "Client Reviews & Success Stories";
-const description = "Read how organizations describe working with Cortex Analytix on ERP, healthcare, diagnostics commerce, mobile, and e-commerce platforms.";
+const description = "Read how organizations describe working with Cortex Analytics on ERP, healthcare, diagnostics commerce, mobile, and e-commerce platforms.";
 
 export const metadata: Metadata = {
   title,

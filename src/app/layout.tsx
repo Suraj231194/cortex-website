@@ -13,37 +13,42 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Cortex Analytix — Software for Complex Operations",
-    template: "%s | Cortex Analytix",
+    default: "Cortex Analytics — Software for Complex Operations",
+    template: "%s | Cortex Analytics",
   },
   description:
-    "Cortex Analytix builds scalable software platforms for healthcare, diagnostics, manufacturing, and commerce, turning fragmented workflows into connected operations.",
+    "Cortex Analytics builds scalable software platforms for healthcare, diagnostics, manufacturing, and commerce, turning fragmented workflows into connected operations.",
   keywords: [
     "AI Development",
     "ERP Solutions",
     "Flutter Apps",
     "Web Development",
     "Software Consulting",
-    "Cortex Analytix",
+    "Cortex Analytics",
   ],
-  authors: [{ name: "Cortex Analytix" }],
+  authors: [{ name: "Cortex Analytics" }],
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "Cortex Analytix",
-    title: "Cortex Analytix — Software for Complex Operations",
+    siteName: "Cortex Analytics",
+    title: "Cortex Analytics — Software for Complex Operations",
     description:
       "Scalable software platforms for healthcare, diagnostics, manufacturing, and commerce, built to simplify complex operations.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cortex Analytix — Software for Complex Operations",
+    title: "Cortex Analytics — Software for Complex Operations",
     description:
       "Scalable software platforms for healthcare, diagnostics, manufacturing, and commerce, built to simplify complex operations.",
   },
   robots: {
     index: true,
     follow: true,
+  },
+  icons: {
+    icon: "/logo-mark.png",
+    shortcut: "/favicon-32x32.png",
+    apple: "/apple-touch-icon.png",
   },
 };
 

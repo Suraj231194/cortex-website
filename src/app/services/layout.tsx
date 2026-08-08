@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 const title = "Software Development Services";
-const description = "Explore Cortex Analytix services for AI, ERP, web, mobile, cloud, API, automation, and data platforms built around complex business operations.";
+const description = "Explore Cortex Analytics services for AI, ERP, web, mobile, cloud, API, automation, and data platforms built around complex business operations.";
 
 export const metadata: Metadata = {
   title,

@@ -47,10 +47,9 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: GithubIcon, href: "https://github.com/cortexanalytix", label: "GitHub" },
-  { icon: LinkedinIcon, href: "https://linkedin.com/company/cortexanalytix", label: "LinkedIn" },
-  { icon: TwitterIcon, href: "https://twitter.com/cortexanalytix", label: "Twitter" },
-  { icon: Mail, href: "mailto:hello@cortexanalytix.com", label: "Email" },
+  { icon: GithubIcon, href: "https://github.com/cortexanalytics", label: "GitHub" },
+  { icon: LinkedinIcon, href: "https://linkedin.com/company/cortexanalytics", label: "LinkedIn" },
+  { icon: Mail, href: "mailto:hello@cortexanalytics.com", label: "Email" },
 ];
 
 export default function Footer() {
@@ -90,7 +89,7 @@ export default function Footer() {
               <span className="rounded-lg bg-white p-1"><CortexMark size={32} /></span>
               <div>
                 <span className="text-base font-bold text-text-primary">Cortex </span>
-                <span className="text-base font-bold text-gradient">Analytix</span>
+                <span className="text-base font-bold text-gradient">Analytics</span>
               </div>
             </Link>
             <p className="mb-4 max-w-md text-xs leading-relaxed text-text-secondary">
@@ -159,14 +158,13 @@ export default function Footer() {
           <div className="absolute top-0 left-0 right-0 section-divider" />
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-xs text-text-tertiary">
-              © {new Date().getFullYear()} Cortex Analytix. All rights reserved.
+              © {new Date().getFullYear()} Cortex Analytics. All rights reserved.
             </p>
             <p className="text-xs text-text-tertiary">
               Insight. Innovation. Impact.
             </p>
           </div>
         </div>
-        <div className="overflow-hidden border-t border-white/10 py-3 text-center text-[clamp(1.9rem,6.4vw,5.75rem)] font-semibold leading-none tracking-[-.075em] text-white/[.045]">CORTEX ANALYTIX</div>
       </div>
     </footer>
   );

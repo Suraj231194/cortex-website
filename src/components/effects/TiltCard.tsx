@@ -98,7 +98,7 @@ export default function TiltCard({
           rotateY: springRotateY,
           transformStyle: "preserve-3d",
         }}
-        className="relative"
+        className="relative h-full"
       >
         {children}
         {/* Spotlight overlay */}

@@ -57,7 +57,7 @@ export default function Header() {
                 Cortex
               </span>
               <span className="text-lg font-bold text-gradient ml-1">
-                Analytix
+                Analytics
               </span>
             </div>
           </Link>

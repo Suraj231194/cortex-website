@@ -66,10 +66,10 @@ export default function ContactPage() {
                             Email
                           </p>
                           <a
-                            href="mailto:hello@cortexanalytix.com"
+                            href="mailto:hello@cortexanalytics.com"
                             className="text-sm text-text-secondary hover:text-brand-primary-light transition-colors"
                           >
-                            hello@cortexanalytix.com
+                            hello@cortexanalytics.com
                           </a>
                         </div>
                       </div>

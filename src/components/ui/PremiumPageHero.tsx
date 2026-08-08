@@ -40,7 +40,7 @@ function HeroCopy({ title, subtitle, inverse = false, centered = false }: { titl
     >
       <div className={`mb-3.5 inline-flex items-center gap-2 rounded-full border px-2.5 py-1 text-[9px] font-semibold uppercase tracking-[.18em] shadow-sm ${inverse ? "border-white/15 bg-white/10 text-white/75" : "border-[#8932f8]/20 bg-white/75 text-brand-primary"}`}>
         <span className={`size-1.5 rounded-full ${inverse ? "bg-[#c778ff] shadow-[0_0_10px_#c778ff]" : "bg-brand-primary shadow-[0_0_10px_#8932f8]"}`} />
-        Cortex Analytix
+        Cortex Analytics
       </div>
       <h1 className={`max-w-3xl text-[clamp(1.56rem,2.8vw,3.05rem)] font-medium leading-[1.04] tracking-[-.05em] ${inverse ? "text-white" : "text-text-primary"}`}>{title}</h1>
       <p className={`mt-3.5 max-w-2xl text-[13px] leading-relaxed md:text-sm ${centered ? "mx-auto" : ""} ${inverse ? "text-white/60" : "text-text-secondary"}`}>{subtitle}</p>

@@ -139,16 +139,16 @@ export default function TechnologyUniverse() {
   };
 
   return (
-    <ScrollSection revealDirection="right" className="section relative m-4 overflow-hidden rounded-[clamp(2rem,4vw,4.5rem)] bg-[#0a0610] !py-14 max-md:m-2.5 max-md:!py-10">
+    <ScrollSection revealDirection="right" className="section relative m-4 overflow-hidden rounded-[clamp(2rem,4vw,4.5rem)] bg-[#0a0610] !py-8 md:!py-9 max-md:m-2.5 max-md:!py-7">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_8%,rgba(137,50,248,.32),transparent_30%),radial-gradient(circle_at_5%_65%,rgba(23,120,255,.16),transparent_28%)]" />
       <div className="section-container relative z-10">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-[8px] font-semibold uppercase tracking-[.24em] text-[#cfa8ff]">Technology universe</p>
-          <h2 className="mt-2.5 text-2xl font-medium tracking-[-.045em] text-white md:text-4xl">Built with the right technology for every challenge</h2>
-          <p className="mx-auto mt-3 max-w-xl text-xs leading-relaxed text-white/60 md:text-sm">A unified engineering stack spanning interfaces, platforms, data, testing, and deployment.</p>
+          <h2 className="mt-1.5 text-2xl font-medium tracking-[-.045em] text-white md:text-3xl">Built with the right technology for every challenge</h2>
+          <p className="mx-auto mt-2 max-w-xl text-xs leading-relaxed text-white/60 md:text-sm">A unified engineering stack spanning interfaces, platforms, data, testing, and deployment.</p>
         </div>
 
-        <div className="relative mx-auto my-5 aspect-square w-full max-w-[460px] [perspective:1100px] md:my-7">
+        <div className="relative mx-auto my-3 aspect-square w-full max-w-[350px] [perspective:1100px] md:my-4">
           <div className="pointer-events-none absolute bottom-[2%] left-[14%] h-[14%] w-[72%] rounded-[50%] bg-[#5f23bc]/25 blur-2xl" />
           <motion.div
             role="group"

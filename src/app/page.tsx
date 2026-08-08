@@ -7,6 +7,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import ProjectCard from "@/components/ui/ProjectCard";
 import ServiceCard from "@/components/ui/ServiceCard";
 import TestimonialCard from "@/components/ui/TestimonialCard";
+import TestimonialsMarquee from "@/components/ui/TestimonialsMarquee";
 import StatCounter from "@/components/ui/StatCounter";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import AuroraBackground from "@/components/effects/AuroraBackground";
@@ -21,7 +22,6 @@ import { services } from "@/content/services";
 import { reviews } from "@/content/reviews";
 import { stats } from "@/content/stats";
 import CortexMark from "@/components/brand/CortexMark";
-import CapabilityOrbit from "@/components/effects/CapabilityOrbit";
 import TechnologyUniverse from "@/components/effects/TechnologyUniverse";
 import TiltCard from "@/components/effects/TiltCard";
 import ScrollSection from "@/components/ui/ScrollSection";
@@ -32,7 +32,7 @@ export default function HomePage() {
   return (
     <PageTransition>
       {/* ─── HERO SECTION ─── */}
-      <section className="relative isolate flex min-h-[78svh] flex-col justify-center overflow-hidden bg-white pb-12 pt-28 sm:pt-30 md:pb-14 md:pt-32">
+      <section className="relative isolate flex min-h-[65svh] flex-col justify-center overflow-hidden bg-white pb-8 pt-24 md:pb-10 md:pt-28">
         {/* Animated background layers */}
         <div className="absolute inset-0 bg-grid" />
         <AuroraBackground />
@@ -50,7 +50,7 @@ export default function HomePage() {
               damping: 20,
               delay: 0.1,
             }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#8932f8]/20 bg-[#f6efff] px-3 py-1.5 shadow-sm backdrop-blur-sm animate-badge-float"
+            className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#8932f8]/20 bg-[#f6efff] px-3 py-1.5 shadow-sm backdrop-blur-sm animate-badge-float"
           >
             <Sparkles className="w-4 h-4 text-brand-accent" />
             <span className="text-sm text-text-secondary">
@@ -68,7 +68,7 @@ export default function HomePage() {
               damping: 20,
               delay: 0.2,
             }}
-            className="mx-auto max-w-[1000px] text-[clamp(2.125rem,4.6vw,3.75rem)] font-medium leading-[1.08] tracking-[-.045em]"
+            className="mx-auto max-w-[1000px] text-[clamp(2rem,4.4vw,3.5rem)] font-medium leading-[1.08] tracking-[-.045em]"
           >
             Building Intelligent Platforms for{" "}
             <span className="text-gradient-shimmer">Healthcare, Diagnostics,</span>
@@ -86,9 +86,9 @@ export default function HomePage() {
               damping: 20,
               delay: 0.4,
             }}
-            className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-text-secondary md:text-lg"
+            className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-text-secondary md:text-lg"
           >
-            Cortex Analytix builds scalable software that replaces fragmented
+            Cortex Analytics builds scalable software that replaces fragmented
             workflows with connected operations that are easier to manage,
             measure, and grow.
           </motion.p>
@@ -103,7 +103,7 @@ export default function HomePage() {
               damping: 20,
               delay: 0.6,
             }}
-            className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row"
+            className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row"
           >
             <MagneticButton>
               <Link href="/projects/" className="btn-primary text-base">
@@ -127,9 +127,9 @@ export default function HomePage() {
               damping: 20,
               delay: 0.8,
             }}
-            className="mt-12"
+            className="mt-8"
           >
-            <CortexMark size={90} className="mx-auto opacity-80 transition-opacity duration-500 hover:opacity-100 animate-float-gentle" />
+            <CortexMark size={75} className="mx-auto opacity-80 transition-opacity duration-500 hover:opacity-100 animate-float-gentle" />
           </motion.div>
         </div>
 
@@ -228,30 +228,24 @@ export default function HomePage() {
 
       <TechnologyUniverse />
 
-      <CapabilityOrbit />
-
       {/* ─── TESTIMONIALS SECTION ─── */}
       <ScrollSection revealDirection="right" className="section relative m-4 overflow-clip rounded-[clamp(2rem,4vw,4.5rem)] border border-black/[.075] bg-white max-md:m-2.5 max-md:rounded-[2rem]">
         <div className="section-container relative z-10">
           <SectionHeading
             title="Client Stories"
-            subtitle="What our partners say about working with Cortex Analytix."
+            subtitle="What our partners say about working with Cortex Analytics."
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {reviews.map((review, i) => (
-              <TestimonialCard key={review.name} review={review} index={i} />
-            ))}
-          </div>
         </div>
+        <TestimonialsMarquee reviews={reviews} />
       </ScrollSection>
 
-      {/* ─── CTA SECTION ─── */}
+      {/* ─── CTA SECTION (Commented Out) ─── */}
+      {/*
       <ScrollSection revealBlur className="section">
         <div className="section-container">
           <ScrollReveal blur>
             <GlowingBorder borderRadius={20}>
               <div className="relative overflow-hidden rounded-[20px] p-8 md:p-16 text-center glass-card-elevated">
-                {/* Background accent */}
                 <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/10 via-transparent to-brand-secondary/10" />
                 <FloatingParticles count={6} className="opacity-20" />
 
@@ -274,6 +268,7 @@ export default function HomePage() {
           </ScrollReveal>
         </div>
       </ScrollSection>
+      */}
     </PageTransition>
   );
 }

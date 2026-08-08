@@ -9,9 +9,14 @@ import TiltCard from "@/components/effects/TiltCard";
 interface TestimonialCardProps {
   review: Review;
   index?: number;
+  animateFloat?: boolean;
 }
 
-export default function TestimonialCard({ review, index = 0 }: TestimonialCardProps) {
+export default function TestimonialCard({
+  review,
+  index = 0,
+  animateFloat = false,
+}: TestimonialCardProps) {
   const prefersReduced = useReducedMotion();
 
   return (
@@ -25,8 +30,8 @@ export default function TestimonialCard({ review, index = 0 }: TestimonialCardPr
         damping: 20,
         delay: index * 0.1,
       }}
-      className={!prefersReduced ? "animate-float-gentle" : ""}
-      style={!prefersReduced ? { animationDelay: `${index * 1.5}s` } : {}}
+      className={`h-full ${animateFloat && !prefersReduced ? "animate-float-gentle" : ""}`}
+      style={animateFloat && !prefersReduced ? { animationDelay: `${index * 1.5}s` } : {}}
     >
       <TiltCard maxTilt={4} spotlightSize={210} className="h-full">
       <div className="glass-card group relative flex h-full flex-col overflow-hidden p-6 shadow-[0_18px_45px_rgba(49,21,87,.08)] [transform:translateZ(0)]">

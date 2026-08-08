@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 const title = "Contact Our Software Team";
-const description = "Contact Cortex Analytix to discuss a healthcare, diagnostics, manufacturing, commerce, ERP, web, mobile, cloud, or AI software project.";
+const description = "Contact Cortex Analytics to discuss a healthcare, diagnostics, manufacturing, commerce, ERP, web, mobile, cloud, or AI software project.";
 
 export const metadata: Metadata = {
   title,

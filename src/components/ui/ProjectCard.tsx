@@ -40,12 +40,13 @@ export default function ProjectCard({ project, index = 0 }: ProjectCardProps) {
         damping: 20,
         delay: index * 0.1,
       }}
+      className="h-full"
     >
-      <TiltCard maxTilt={5}>
-        <Link href={`/projects/${project.slug}/`} className="group block">
-          <div className="glass-card overflow-hidden h-full flex flex-col">
+      <TiltCard maxTilt={5} className="h-full">
+        <Link href={`/projects/${project.slug}/`} className="group block h-full">
+          <div className="glass-card overflow-hidden h-full flex flex-col justify-between">
             {/* Thumbnail Image */}
-            <div className="relative h-48 sm:h-56 overflow-hidden bg-surface">
+            <div className="relative h-48 sm:h-56 shrink-0 overflow-hidden bg-surface">
               {project.thumbnail ? (
                 <Image
                   src={getAssetPath(project.thumbnail)}
@@ -76,26 +77,28 @@ export default function ProjectCard({ project, index = 0 }: ProjectCardProps) {
             </div>
 
             {/* Content */}
-            <div className="p-6">
-              {/* Category badge */}
-              <span
-                className={`inline-block text-xs font-medium px-3 py-1 rounded-full border ${
-                  categoryColors[project.category] || categoryColors.web
-                }`}
-              >
-                {categoryLabels[project.category] || project.category}
-              </span>
+            <div className="p-6 flex flex-col flex-1 justify-between gap-4">
+              <div>
+                {/* Category badge */}
+                <span
+                  className={`inline-block text-xs font-medium px-3 py-1 rounded-full border ${
+                    categoryColors[project.category] || categoryColors.web
+                  }`}
+                >
+                  {categoryLabels[project.category] || project.category}
+                </span>
 
-              <h3 className="mt-3 text-lg font-semibold text-text-primary group-hover:text-brand-primary-light transition-colors duration-300 line-clamp-1">
-                {project.title}
-              </h3>
+                <h3 className="mt-3 text-lg font-semibold text-text-primary group-hover:text-brand-primary-light transition-colors duration-300 line-clamp-1">
+                  {project.title}
+                </h3>
 
-              <p className="mt-2 text-sm text-text-secondary line-clamp-2 leading-relaxed">
-                {project.description}
-              </p>
+                <p className="mt-2 text-sm text-text-secondary line-clamp-2 leading-relaxed">
+                  {project.description}
+                </p>
+              </div>
 
               {/* Tech badges with stagger animation */}
-              <div className="mt-4 flex flex-wrap gap-1.5">
+              <div className="flex flex-wrap gap-1.5 pt-2 border-t border-black/[.04]">
                 {project.technologies.slice(0, 4).map((tech) => (
                   <span
                     key={tech}

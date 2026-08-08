@@ -1,13 +1,13 @@
-# Cortex Analytix — Premium Portfolio Website
+# Cortex Analytics — Premium Portfolio Website
 
-Build a modern, dark-themed portfolio website for **Cortex Analytix** to showcase AI, ERP, Flutter, and full-stack projects. Hosted on **GitHub Pages** via static export. Inspired by Vercel, Linear, Clerk, and Raycast aesthetic — minimal yet premium.
+Build a modern, dark-themed portfolio website for **Cortex Analytics** to showcase AI, ERP, Flutter, and full-stack projects. Hosted on **GitHub Pages** via static export. Inspired by Vercel, Linear, Clerk, and Raycast aesthetic — minimal yet premium.
 
 ---
 
 ## User Review Required
 
 > [!IMPORTANT]
-> **Brand Assets Needed**: Please provide the Cortex Analytix logo (SVG preferred), brand colors (if different from proposed purple/blue palette), and any specific tagline you'd like on the hero section.
+> **Brand Assets Needed**: Please provide the Cortex Analytics logo (SVG preferred), brand colors (if different from proposed purple/blue palette), and any specific tagline you'd like on the hero section.
 
 > [!IMPORTANT]
 > **Content Inventory**: The plan uses placeholder project data. You'll need to supply:
@@ -17,7 +17,7 @@ Build a modern, dark-themed portfolio website for **Cortex Analytix** to showcas
 > - Service descriptions and any case study write-ups
 
 > [!WARNING]
-> **GitHub Pages Custom Domain**: If you plan to use a custom domain (e.g., `cortexanalytix.com`) instead of `<username>.github.io/Cortex-website`, let me know — this affects the `basePath` and `assetPrefix` configuration. The current plan assumes a **repository sub-path** deployment.
+> **GitHub Pages Custom Domain**: If you plan to use a custom domain (e.g., `cortexanalytics.com`) instead of `<username>.github.io/Cortex-website`, let me know — this affects the `basePath` and `assetPrefix` configuration. The current plan assumes a **repository sub-path** deployment.
 
 > [!IMPORTANT]
 > **Contact Form Provider**: The plan uses **EmailJS** (200 emails/month free) since this is a portfolio site with low-volume inquiries. If you prefer **Formspree** (50/month, but with a dashboard + spam protection), let me know.
@@ -155,7 +155,7 @@ Tailwind v4 CSS-first design system with `@theme` directive defining:
 
 Root layout with:
 - Google Fonts (Inter) preconnect + link
-- Global metadata (title template: `%s | Cortex Analytix`, description, OpenGraph defaults)
+- Global metadata (title template: `%s | Cortex Analytics`, description, OpenGraph defaults)
 - Microsoft Clarity script (via `next/script`)
 - GA4 script (via `next/script`, consent-aware)
 - `<Header />` + `<Footer />` components
@@ -168,7 +168,7 @@ Root layout with:
 #### [NEW] [src/components/layout/Header.tsx](file:///c:/Sigma_Projects/PersonalDocs/Project/Cortex-website/src/components/layout/Header.tsx)
 
 Fixed top navigation with glassmorphism (`bg-black/80 backdrop-blur-xl`):
-- Cortex Analytix logo/wordmark
+- Cortex Analytics logo/wordmark
 - Nav links: Home, About, Services, Projects, Videos, Reviews, Blog, Contact
 - Mobile hamburger menu with slide-in drawer (shadcn Sheet)
 - Active link highlighting

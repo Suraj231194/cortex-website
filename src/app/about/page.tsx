@@ -28,6 +28,7 @@ import { Code2, Users, Target, Award } from "lucide-react";
 import CortexMark from "@/components/brand/CortexMark";
 import PremiumPageHero from "@/components/ui/PremiumPageHero";
 import ScrollSection from "@/components/ui/ScrollSection";
+import CapabilityOrbit from "@/components/effects/CapabilityOrbit";
 
 const values = [
   {
@@ -88,7 +89,7 @@ export default function AboutPage() {
             <div className="text-center">
               <PremiumPageHero
                 variant="about"
-                title="About Cortex Analytix"
+                title="About Cortex Analytics"
                 subtitle="We're a technology consulting firm that transforms business challenges into intelligent software solutions."
               />
               <ScrollReveal blur>
@@ -99,7 +100,7 @@ export default function AboutPage() {
               <ScrollReveal delay={0.2}>
                 <p className="mx-auto max-w-3xl text-lg leading-relaxed text-text-secondary">
                   Founded with the vision of bridging the gap between cutting-edge
-                  technology and real-world business needs, Cortex Analytix
+                  technology and real-world business needs, Cortex Analytics
                   specializes in building AI-powered applications, enterprise
                   resource planning systems, cross-platform mobile apps, and
                   modern web platforms. Our tagline —{" "}
@@ -113,6 +114,8 @@ export default function AboutPage() {
             </div>
           </div>
         </ScrollSection>
+
+        <CapabilityOrbit />
 
         {/* Values */}
         <ScrollSection revealDirection="left" className="section relative bg-surface/20">

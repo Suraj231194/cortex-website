@@ -9,18 +9,18 @@ interface CortexMarkProps {
 export default function CortexMark({ className = "", size = 44 }: CortexMarkProps) {
   return (
     <span
-      className={`relative inline-block shrink-0 overflow-hidden ${className}`}
+      className={`relative inline-block shrink-0 ${className}`}
       style={{ width: size, height: size }}
       aria-hidden="true"
     >
       <Image
-        src={getAssetPath("/logo.png")}
-        alt=""
-        width={1254}
-        height={1254}
+        src={getAssetPath("/logo-mark.png")}
+        alt="Cortex Analytics"
+        width={404}
+        height={410}
         sizes={`${Math.ceil(size * 2)}px`}
         draggable={false}
-        className="pointer-events-none absolute left-1/2 top-[77%] h-auto w-[195%] max-w-none -translate-x-1/2 -translate-y-1/2 select-none"
+        className="pointer-events-none h-full w-full object-contain select-none"
       />
     </span>
   );
