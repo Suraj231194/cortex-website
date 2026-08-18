@@ -70,9 +70,9 @@ export default function ServiceCard({ service, index = 0, compact = false }: Ser
         damping: 20,
         delay: index * 0.08,
       }}
-      className="group"
+      className="group h-full"
     >
-      <TiltCard maxTilt={4}>
+      <TiltCard maxTilt={4} className="h-full">
         <div className={`glass-card relative flex h-full flex-col overflow-hidden ${compact ? "p-4" : "p-6"}`}>
           {/* Subtle spotlight effect on hover */}
           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">

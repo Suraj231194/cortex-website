@@ -19,43 +19,15 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
+import AboutValuesMarquee from "@/components/ui/AboutValuesMarquee";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import TiltCard from "@/components/effects/TiltCard";
 import FloatingParticles from "@/components/effects/FloatingParticles";
 import PageTransition from "@/components/effects/PageTransition";
-import { Code2, Users, Target, Award } from "lucide-react";
 import CortexMark from "@/components/brand/CortexMark";
 import PremiumPageHero from "@/components/ui/PremiumPageHero";
 import ScrollSection from "@/components/ui/ScrollSection";
 import CapabilityOrbit from "@/components/effects/CapabilityOrbit";
-
-const values = [
-  {
-    icon: Target,
-    title: "Client-First Approach",
-    description:
-      "Every solution we build starts with understanding your business deeply. We don't just write code — we solve problems.",
-  },
-  {
-    icon: Code2,
-    title: "Engineering Excellence",
-    description:
-      "Clean architecture, modern tooling, and rigorous testing. We build software that's maintainable, scalable, and secure.",
-  },
-  {
-    icon: Users,
-    title: "Collaborative Partnership",
-    description:
-      "We work as an extension of your team — transparent communication, shared goals, and joint ownership of outcomes.",
-  },
-  {
-    icon: Award,
-    title: "Measurable Impact",
-    description:
-      "Every project delivers quantifiable value — whether it's 40% efficiency gains, reduced costs, or accelerated time-to-market.",
-  },
-];
 
 type TechIcon = ComponentType<{ className?: string; style?: CSSProperties }>;
 type TechStackItem = { name: string; icon: TechIcon; color: string };
@@ -82,15 +54,14 @@ export default function AboutPage() {
   return (
     <PageTransition>
       <div className="pt-20 md:pt-24">
-        {/* Hero */}
         <ScrollSection className="section relative !pt-6 md:!pt-8">
           <FloatingParticles count={8} className="opacity-20" />
           <div className="section-container relative z-10">
             <div className="text-center">
               <PremiumPageHero
                 variant="about"
-                title="About Cortex Analytics"
-                subtitle="We're a technology consulting firm that transforms business challenges into intelligent software solutions."
+                title="About Company"
+                subtitle="Engineering the Systems Behind Ambitious Businesses"
               />
               <ScrollReveal blur>
                 <div className="mb-8 flex justify-center">
@@ -99,96 +70,62 @@ export default function AboutPage() {
               </ScrollReveal>
               <ScrollReveal delay={0.2}>
                 <p className="mx-auto max-w-3xl text-lg leading-relaxed text-text-secondary">
-                  Founded with the vision of bridging the gap between cutting-edge
-                  technology and real-world business needs, Cortex Analytics
-                  specializes in building AI-powered applications, enterprise
-                  resource planning systems, cross-platform mobile apps, and
-                  modern web platforms. Our tagline —{" "}
-                  <span className="text-gradient-shimmer font-semibold">
-                    Insight. Innovation. Impact.
-                  </span>{" "}
-                  — reflects our commitment to delivering solutions that are not
-                  just technically excellent, but strategically impactful.
+                  We started with one belief: the right software can make anything run better. Cortex Analytics builds the systems businesses run on — AI applications, ERP platforms, mobile apps, and web experiences — engineered with precision and built to scale. Our tagline, <span className="text-gradient-shimmer font-semibold">Insight. Innovation. Impact.</span>, is the standard we hold every build to: technically excellent, strategically impactful.
                 </p>
               </ScrollReveal>
             </div>
           </div>
         </ScrollSection>
 
-        <CapabilityOrbit />
-
-        {/* Values */}
-        <ScrollSection revealDirection="left" className="section relative bg-surface/20">
-          <div className="section-container relative z-10">
-            <SectionHeading
-              title="Our Values"
-              subtitle="The principles that guide every project we deliver."
-            />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {values.map((value, i) => (
-                <ScrollReveal key={value.title} delay={i * 0.1}>
-                  <TiltCard maxTilt={3}>
-                    <div className="glass-card p-6 h-full flex gap-4 relative overflow-hidden group">
-                      {/* Hover glow */}
-                      <div className="absolute top-0 right-0 w-24 h-24 bg-brand-primary/0 group-hover:bg-brand-primary/5 rounded-full blur-3xl transition-all duration-500 pointer-events-none" />
-
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-primary/20 to-brand-secondary/20 flex items-center justify-center flex-shrink-0 group-hover:shadow-[0_0_20px_rgba(137,50,248,0.2)] transition-all duration-300">
-                        <value.icon className="w-6 h-6 text-brand-primary-light" />
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-text-primary mb-2">
-                          {value.title}
-                        </h3>
-                        <p className="text-sm text-text-secondary leading-relaxed">
-                          {value.description}
-                        </p>
-                      </div>
-                    </div>
-                  </TiltCard>
-                </ScrollReveal>
-              ))}
-            </div>
+        <ScrollSection className="section relative !pt-2">
+          <div className="section-container">
+            <ScrollReveal blur>
+              <article className="mx-auto max-w-5xl overflow-hidden rounded-[2rem] border border-black/[.07] bg-white p-6 shadow-[0_22px_60px_rgba(49,21,87,.09)] md:p-10">
+                <div className="mb-6 h-1 w-16 rounded-full bg-gradient-to-r from-brand-secondary to-brand-primary" />
+                <h2 className="text-2xl font-semibold tracking-[-.04em] text-text-primary md:text-3xl">Founder Story</h2>
+                <div className="mt-6 space-y-4 text-base leading-relaxed text-text-secondary">
+                  <p>Over the years, I noticed a pattern across businesses of every size. Teams weren&apos;t struggling because they lacked ambition—they were struggling because the systems they depended on weren&apos;t built to support it.</p>
+                  <p>Processes were fragmented. Data was scattered. Decisions were slower than they needed to be. Technology had become something businesses worked around instead of something that worked for them.</p>
+                  <p>That realization led to the creation of Cortex Analytics.</p>
+                  <p>I wanted to build a company where engineering came first—where every solution was designed with precision, built to scale, and focused on solving real business problems rather than adding unnecessary complexity.</p>
+                  <p>Today, that philosophy remains unchanged. Every ERP platform, AI solution, mobile application, and web platform we build is driven by one goal: helping businesses operate smarter, move faster, and grow with confidence.</p>
+                  <p>Because great software isn&apos;t defined by the number of features it has. It&apos;s defined by the impact it creates.</p>
+                </div>
+                <p className="mt-7 text-sm font-semibold uppercase tracking-[.15em] text-brand-primary">Founder Cortex Analytics</p>
+              </article>
+            </ScrollReveal>
           </div>
         </ScrollSection>
 
-        {/* Tech Stack */}
+        <CapabilityOrbit />
+
+        <ScrollSection revealDirection="left" className="section relative bg-surface/20">
+          <div className="section-container relative z-10">
+            <SectionHeading title="Our Values" subtitle="The principles that guide every project we deliver." />
+            <AboutValuesMarquee />
+          </div>
+        </ScrollSection>
+
         <ScrollSection revealDirection="right" className="section relative">
           <FloatingParticles count={6} className="opacity-15" />
           <div className="section-container relative z-10">
-            <SectionHeading
-              title="Our Technology Stack"
-              subtitle="We work with modern, battle-tested technologies chosen for performance, scalability, and developer experience."
-            />
+            <SectionHeading title="Our Technology Stack" subtitle="We work with modern, battle-tested technologies chosen for performance, scalability, and developer experience." />
             <ScrollReveal blur>
-              <div className="mx-auto grid max-w-5xl grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
-                {techStack.map((tech, i) => (
+              <div className="mx-auto grid max-w-7xl grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-5 xl:grid-cols-8">
+                {techStack.map((tech, index) => (
                   <motion.div
                     key={tech.name}
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 150,
-                      damping: 18,
-                      delay: i * 0.04,
-                    }}
-                    whileHover={{
-                      scale: 1.08,
-                      y: -2,
-                      transition: { duration: 0.2 },
-                    }}
+                    transition={{ type: "spring", stiffness: 150, damping: 18, delay: index * 0.04 }}
+                    whileHover={{ scale: 1.08, y: -2, transition: { duration: 0.2 } }}
                     className="group flex min-h-24 cursor-default flex-col items-center justify-center gap-3 rounded-2xl border border-black/[.07] bg-white/75 px-3 py-4 text-center shadow-[0_12px_30px_rgba(26,20,42,.06)] backdrop-blur-md transition-all duration-300 hover:border-black/10 hover:bg-white hover:shadow-[0_18px_42px_rgba(26,20,42,.12)]"
                   >
-                    <span
-                      className="grid size-11 place-items-center rounded-xl border border-black/[.06] bg-white shadow-lg transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-110"
-                      style={{ boxShadow: `0 10px 24px ${tech.color}26` }}
-                    >
+                    <span className="grid size-11 place-items-center rounded-xl border border-black/[.06] bg-white shadow-lg transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-110" style={{ boxShadow: `0 10px 24px ${tech.color}26` }}>
                       <tech.icon className="size-6" style={{ color: tech.color }} />
                     </span>
-                    <span className="text-xs font-semibold leading-tight text-text-primary sm:text-sm">
-                      {tech.name}
-                    </span>
+                    <span className="text-xs font-semibold leading-tight text-text-primary sm:text-sm">{tech.name}</span>
                   </motion.div>
                 ))}
               </div>

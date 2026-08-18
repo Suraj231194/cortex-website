@@ -18,9 +18,9 @@ export default function ServicesPage() {
             <PremiumPageHero
               variant="services"
               title="Our Services"
-              subtitle="End-to-end software solutions tailored to your business needs — from concept to deployment and beyond."
+              subtitle="When a challenge doesn't fit a category, we build the category. Integrations, automation, and emerging technology — engineered with the same discipline as everything else we ship."
             />
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="grid grid-cols-1 items-stretch gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {services.map((service, i) => (
                 <ServiceCard key={service.title} service={service} index={i} />
               ))}

@@ -50,7 +50,7 @@ export default function SectionHeading({
         <h2
           className={`${compact ? "text-2xl sm:text-3xl md:text-4xl" : "text-3xl sm:text-4xl md:text-5xl"} font-bold tracking-tight ${
             gradient ? "text-gradient-shimmer" : "text-text-primary"
-          }`}
+          } leading-[1.15] pb-1`}
         >
           {title}
         </h2>
@@ -85,7 +85,7 @@ export default function SectionHeading({
         variants={childVariants}
         className={`${compact ? "text-2xl sm:text-3xl md:text-4xl" : "text-3xl sm:text-4xl md:text-5xl"} font-bold tracking-tight ${
           gradient ? "text-gradient-shimmer" : "text-text-primary"
-        }`}
+        } leading-[1.15] pb-1`}
       >
         {title}
       </motion.h2>

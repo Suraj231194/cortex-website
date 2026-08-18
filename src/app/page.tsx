@@ -5,23 +5,18 @@ import { motion } from "motion/react";
 import { ArrowRight, Sparkles } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ProjectCard from "@/components/ui/ProjectCard";
-import ServiceCard from "@/components/ui/ServiceCard";
-import TestimonialCard from "@/components/ui/TestimonialCard";
-import TestimonialsMarquee from "@/components/ui/TestimonialsMarquee";
+import TestimonialsCarousel from "@/components/ui/TestimonialsCarousel";
 import StatCounter from "@/components/ui/StatCounter";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import AuroraBackground from "@/components/effects/AuroraBackground";
 import FloatingGeometry from "@/components/effects/FloatingGeometry";
 import FloatingParticles from "@/components/effects/FloatingParticles";
 import MagneticButton from "@/components/effects/MagneticButton";
-import GlowingBorder from "@/components/effects/GlowingBorder";
 import PageTransition from "@/components/effects/PageTransition";
 // import Scroll3DScene from "@/components/effects/Scroll3DScene";
 import { getFeaturedProjects } from "@/content/projects";
-import { services } from "@/content/services";
 import { reviews } from "@/content/reviews";
 import { stats } from "@/content/stats";
-import CortexMark from "@/components/brand/CortexMark";
 import TechnologyUniverse from "@/components/effects/TechnologyUniverse";
 import TiltCard from "@/components/effects/TiltCard";
 import ScrollSection from "@/components/ui/ScrollSection";
@@ -54,7 +49,7 @@ export default function HomePage() {
           >
             <Sparkles className="w-4 h-4 text-brand-accent" />
             <span className="text-sm text-text-secondary">
-              A software company for complex business operations
+              A technology studio for businesses built to move fast
             </span>
           </motion.div>
 
@@ -70,10 +65,8 @@ export default function HomePage() {
             }}
             className="mx-auto max-w-[1000px] text-[clamp(2rem,4.4vw,3.5rem)] font-medium leading-[1.08] tracking-[-.045em]"
           >
-            Building Intelligent Platforms for{" "}
-            <span className="text-gradient-shimmer">Healthcare, Diagnostics,</span>
-            <br />
-            <span className="text-gradient-shimmer">Manufacturing &amp; Commerce</span>
+            Engineering the Systems Behind{" "}
+            <span className="text-gradient-shimmer">Ambitious Businesses</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -88,49 +81,11 @@ export default function HomePage() {
             }}
             className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-text-secondary md:text-lg"
           >
-            Cortex Analytics builds scalable software that replaces fragmented
-            workflows with connected operations that are easier to manage,
-            measure, and grow.
+            We design and build the systems that sit at the center of a business
+            — software engineered with the precision to scale and the range to
+            adapt.
           </motion.p>
 
-          {/* CTAs */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              type: "spring",
-              stiffness: 80,
-              damping: 20,
-              delay: 0.6,
-            }}
-            className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row"
-          >
-            <MagneticButton>
-              <Link href="/projects/" className="btn-primary text-base">
-                View Projects <ArrowRight className="w-4 h-4" />
-              </Link>
-            </MagneticButton>
-            <MagneticButton>
-              <Link href="/contact/" className="btn-secondary text-base">
-                Book a Consultation
-              </Link>
-            </MagneticButton>
-          </motion.div>
-
-          {/* Logo */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 80,
-              damping: 20,
-              delay: 0.8,
-            }}
-            className="mt-8"
-          >
-            <CortexMark size={75} className="mx-auto opacity-80 transition-opacity duration-500 hover:opacity-100 animate-float-gentle" />
-          </motion.div>
         </div>
 
         {/* Scroll indicator */}
@@ -199,76 +154,20 @@ export default function HomePage() {
       </ScrollSection>
 
       {/* ─── SERVICES SECTION ─── */}
-      <ScrollSection className="section relative m-4 overflow-clip rounded-[clamp(2rem,4vw,4.5rem)] border border-black/[.075] bg-[radial-gradient(circle_at_85%_0%,rgba(137,50,248,.13),transparent_35%)] bg-[#faf8fc] !py-[4.5rem] max-md:m-2.5 max-md:rounded-[2rem] max-md:!py-12">
-        <div className="absolute inset-0 bg-radial-glow opacity-50" />
-        <FloatingParticles count={10} className="opacity-20" />
-        <div className="section-container relative z-10">
-          <SectionHeading
-            title="What We Build"
-            subtitle="End-to-end software services — from concept to deployment and beyond."
-            compact
-          />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {services.slice(0, 4).map((service, i) => (
-              <ServiceCard key={service.title} service={service} index={i} compact />
-            ))}
-          </div>
-          <ScrollReveal className="mt-8 text-center">
-            <MagneticButton>
-              <Link
-                href="/services/"
-                className="btn-secondary inline-flex items-center gap-2"
-              >
-                All Services <ArrowRight className="w-4 h-4" />
-              </Link>
-            </MagneticButton>
-          </ScrollReveal>
-        </div>
-      </ScrollSection>
-
       <TechnologyUniverse />
 
       {/* ─── TESTIMONIALS SECTION ─── */}
       <ScrollSection revealDirection="right" className="section relative m-4 overflow-clip rounded-[clamp(2rem,4vw,4.5rem)] border border-black/[.075] bg-white max-md:m-2.5 max-md:rounded-[2rem]">
         <div className="section-container relative z-10">
           <SectionHeading
-            title="Client Stories"
+            title="Featured Client Stories"
             subtitle="What our partners say about working with Cortex Analytics."
           />
         </div>
-        <TestimonialsMarquee reviews={reviews} />
+        <TestimonialsCarousel reviews={reviews} />
       </ScrollSection>
 
       {/* ─── CTA SECTION (Commented Out) ─── */}
-      {/*
-      <ScrollSection revealBlur className="section">
-        <div className="section-container">
-          <ScrollReveal blur>
-            <GlowingBorder borderRadius={20}>
-              <div className="relative overflow-hidden rounded-[20px] p-8 md:p-16 text-center glass-card-elevated">
-                <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/10 via-transparent to-brand-secondary/10" />
-                <FloatingParticles count={6} className="opacity-20" />
-
-                <div className="relative z-10">
-                  <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
-                    Ready to Transform Your Business?
-                  </h2>
-                  <p className="text-text-secondary text-lg max-w-xl mx-auto mb-8">
-                    Let&apos;s discuss how we can build the perfect solution for
-                    your unique challenges.
-                  </p>
-                  <MagneticButton>
-                    <Link href="/contact/" className="btn-primary text-base">
-                      Start a Conversation <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </MagneticButton>
-                </div>
-              </div>
-            </GlowingBorder>
-          </ScrollReveal>
-        </div>
-      </ScrollSection>
-      */}
     </PageTransition>
   );
 }

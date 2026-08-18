@@ -40,12 +40,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...projectRoutes,
     {
-      url: `${BASE_URL}/reviews/`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
       url: `${BASE_URL}/contact/`,
       lastModified: new Date(),
       changeFrequency: "monthly",

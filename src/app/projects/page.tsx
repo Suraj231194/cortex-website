@@ -19,6 +19,12 @@ const categories: { value: Category; label: string }[] = [
   { value: "ecommerce", label: "E-Commerce" },
 ];
 
+const availableCategories = categories.filter(
+  (category) =>
+    category.value === "all" ||
+    projects.some((project) => project.category === category.value),
+);
+
 export default function ProjectsPage() {
   const [activeCategory, setActiveCategory] = useState<Category>("all");
 
@@ -41,7 +47,7 @@ export default function ProjectsPage() {
 
             {/* Category Filter Tabs with animated indicator */}
             <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
-              {categories.map((cat) => (
+              {availableCategories.map((cat) => (
                 <button
                   key={cat.value}
                   onClick={() => setActiveCategory(cat.value)}

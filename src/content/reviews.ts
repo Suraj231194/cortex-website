@@ -9,7 +9,7 @@ export interface Review {
 
 export const reviews: Review[] = [
   {
-    name: "Dr. Sarah Mitchell",
+    name: "Ms. Sarah Mitchell",
     role: "Chief Medical Officer",
     company: "Optimus Health",
     quote:
@@ -17,7 +17,7 @@ export const reviews: Review[] = [
     rating: 5,
   },
   {
-    name: "Rajesh Kapoor",
+    name: "Mr. Rajesh Kapoor",
     role: "Managing Director",
     company: "AutoIVD Pharmaceuticals",
     quote:
@@ -25,7 +25,7 @@ export const reviews: Review[] = [
     rating: 5,
   },
   {
-    name: "Atharv",
+    name: "Mr. Atharv Srivastava",
     role: "Leadership & Strategy",
     company: "Biogenix Diagnostics",
     quote:
@@ -33,7 +33,7 @@ export const reviews: Review[] = [
     rating: 5,
   },
   {
-    name: "Operations Director",
+    name: "Mr. Siddharth Sharma",
     role: "Compliance & Operations",
     company: "Label SR Packaging",
     quote:

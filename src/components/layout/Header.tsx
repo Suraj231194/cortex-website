@@ -12,7 +12,6 @@ const navLinks = [
   { href: "/about/", label: "About" },
   { href: "/services/", label: "Services" },
   { href: "/projects/", label: "Projects" },
-  { href: "/reviews/", label: "Reviews" },
   { href: "/contact/", label: "Contact" },
 ];
 
@@ -89,12 +88,6 @@ export default function Header() {
                 )}
               </Link>
             ))}
-            <Link
-              href="/contact/"
-              className="ml-4 whitespace-nowrap btn-primary text-sm !py-2 !px-5"
-            >
-              Get in Touch
-            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -138,19 +131,6 @@ export default function Header() {
                     </Link>
                   </motion.div>
                 ))}
-                <motion.div
-                  initial={{ opacity: 0, x: -10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: navLinks.length * 0.05 }}
-                >
-                  <Link
-                    href="/contact/"
-                    onClick={() => setIsOpen(false)}
-                    className="mt-2 btn-primary text-sm text-center justify-center"
-                  >
-                    Get in Touch
-                  </Link>
-                </motion.div>
               </div>
             </motion.div>
           )}

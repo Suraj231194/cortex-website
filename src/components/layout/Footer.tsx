@@ -1,19 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import { motion } from "motion/react";
+import { FaWhatsapp } from "react-icons/fa";
 import MagneticButton from "@/components/effects/MagneticButton";
 import CortexMark from "@/components/brand/CortexMark";
-
-/* Inline SVG icons for brand logos (removed from lucide-react) */
-function GithubIcon({ size = 18 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-    </svg>
-  );
-}
 
 function LinkedinIcon({ size = 18 }: { size?: number }) {
   return (
@@ -23,19 +15,10 @@ function LinkedinIcon({ size = 18 }: { size?: number }) {
   );
 }
 
-function TwitterIcon({ size = 18 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
-      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-    </svg>
-  );
-}
-
 const footerLinks = {
   company: [
     { href: "/about/", label: "About Us" },
     { href: "/projects/", label: "Projects" },
-    { href: "/reviews/", label: "Reviews" },
     { href: "/contact/", label: "Contact" },
   ],
   services: [
@@ -47,9 +30,24 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: GithubIcon, href: "https://github.com/cortexanalytics", label: "GitHub" },
-  { icon: LinkedinIcon, href: "https://linkedin.com/company/cortexanalytics", label: "LinkedIn" },
-  { icon: Mail, href: "mailto:hello@cortexanalytics.com", label: "Email" },
+  {
+    icon: LinkedinIcon,
+    href: "https://www.linkedin.com/company/cortex-analytics-solutions/",
+    label: "LinkedIn",
+    external: true,
+  },
+  {
+    icon: Mail,
+    href: "mailto:contactcortexanalytics@gmail.com",
+    label: "Email",
+    external: false,
+  },
+  {
+    icon: FaWhatsapp,
+    href: "https://wa.me/918810927291",
+    label: "WhatsApp",
+    external: true,
+  },
 ];
 
 export default function Footer() {
@@ -59,23 +57,7 @@ export default function Footer() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-primary/30 to-transparent" />
       <div className="absolute top-0 left-1/4 right-1/4 h-[1px] blur-sm bg-gradient-to-r from-transparent via-brand-primary/20 to-transparent" />
 
-      <div className="section-container pt-6">
-        <motion.div
-          initial={{ opacity: 0, y: 35, scale: .97 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          viewport={{ once: true }}
-          className="relative mb-12 overflow-hidden rounded-[1.75rem] border border-white/15 bg-[radial-gradient(circle_at_75%_20%,rgba(177,90,255,.46),transparent_32%),linear-gradient(120deg,#27103f,#111)] p-5 shadow-2xl md:p-9"
-        >
-          <div className="absolute -right-12 -top-16 size-48 rounded-[42%] border-[14px] border-[#8932f8]/35 shadow-[0_0_52px_rgba(137,50,248,.5)] [transform:rotateX(62deg)_rotateY(-18deg)]" />
-          <div className="relative z-10 max-w-2xl">
-            <h2 className="text-2xl font-medium tracking-[-.04em] text-white md:text-4xl">Ready to Transform Your Business?</h2>
-            <p className="mt-3 text-sm text-white/65">Let&apos;s discuss how we can build the perfect solution for your unique challenges.</p>
-            <Link href="/contact/" className="mt-4 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2.5 text-xs font-semibold text-[#0b0610] transition-transform hover:-translate-y-1">
-              Start a Conversation <ArrowRight className="size-3.5" />
-            </Link>
-          </div>
-        </motion.div>
-
+      <div className="section-container pt-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -92,18 +74,13 @@ export default function Footer() {
                 <span className="text-base font-bold text-gradient">Analytics</span>
               </div>
             </Link>
-            <p className="mb-4 max-w-md text-xs leading-relaxed text-text-secondary">
-              Transforming businesses through intelligent software solutions.
-              We build AI-powered applications, ERP systems, mobile apps, and
-              modern web platforms that drive real impact.
-            </p>
             <div className="flex items-center gap-3">
               {socialLinks.map((social) => (
                 <MagneticButton key={social.label} strength={6}>
                   <a
                     href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target={social.external ? "_blank" : undefined}
+                    rel={social.external ? "noopener noreferrer" : undefined}
                     className="block rounded-lg bg-black/[.035] p-2 text-text-tertiary transition-all duration-300 hover:bg-black/5 hover:text-brand-primary-light hover:shadow-[0_0_20px_rgba(137,50,248,0.15)]"
                     aria-label={social.label}
                   >

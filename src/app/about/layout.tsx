@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-const title = "About Our Software Company";
-const description = "Learn how Cortex Analytics helps healthcare, diagnostics, manufacturing, and commerce companies simplify operations through scalable software platforms.";
+const title = "About Company";
+const description = "Learn how Cortex Analytics engineers precise, scalable systems behind ambitious businesses.";
 
 export const metadata: Metadata = {
   title,

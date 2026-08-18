@@ -66,10 +66,10 @@ export default function ContactPage() {
                             Email
                           </p>
                           <a
-                            href="mailto:hello@cortexanalytics.com"
+                            href="mailto:contactcortexanalytics@gmail.com"
                             className="text-sm text-text-secondary hover:text-brand-primary-light transition-colors"
                           >
-                            hello@cortexanalytics.com
+                            contactcortexanalytics@gmail.com
                           </a>
                         </div>
                       </div>
@@ -81,9 +81,12 @@ export default function ContactPage() {
                           <p className="text-sm font-medium text-text-primary">
                             Phone
                           </p>
-                          <p className="text-sm text-text-secondary">
-                            +91 XXXXX XXXXX
-                          </p>
+                          <a
+                            href="tel:+918810927291"
+                            className="text-sm text-text-secondary transition-colors hover:text-brand-primary-light"
+                          >
+                            8810927291
+                          </a>
                         </div>
                       </div>
                       <div className="flex items-start gap-3 group">
@@ -95,7 +98,7 @@ export default function ContactPage() {
                             Location
                           </p>
                           <p className="text-sm text-text-secondary">
-                            Pune, Maharashtra, India
+                            Lucknow &amp; Pune
                           </p>
                         </div>
                       </div>

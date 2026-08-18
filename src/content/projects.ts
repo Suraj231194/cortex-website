@@ -149,68 +149,6 @@ export const projects: Project[] = [
       "Secure API integration with the broader Optimus CGM healthcare platform",
     ],
   },
-  {
-    slug: "cgm-website",
-    title: "Optimus CGM — Healthcare Web Portal",
-    category: "web",
-    description:
-      "A modern healthcare web portal built with Laravel for the Optimus CGM platform — providing patient management, glucose data visualization, reporting, and admin operations.",
-    problem:
-      "The CGM platform needed a complementary web portal for healthcare providers and administrators to manage patients, review glucose data trends, generate reports, and handle system configuration.",
-    solution:
-      "Developed a responsive Laravel web application with Tailwind CSS and Vite, featuring patient data dashboards, glucose trend analysis views, report generation, user management with role-based access, and backend API integration.",
-    technologies: ["Laravel", "PHP", "Tailwind CSS", "Vite", "MySQL", "Chart.js"],
-    duration: "3 months",
-    thumbnail: "/projects/cgm-web-thumb.png",
-    featured: false,
-    highlightsTitle: "Portal Highlights",
-    highlights: [
-      { value: "Role-Based", label: "Provider & Admin Access" },
-      { value: "Trend Views", label: "Glucose Pattern Analysis" },
-      { value: "Reports", label: "Clinical Data Summaries" },
-      { value: "API-Connected", label: "Shared Platform Data" },
-    ],
-    capabilitiesTitle: "Web Portal Capabilities",
-    capabilities: [
-      "Patient directory and profile management for healthcare teams",
-      "Responsive glucose dashboards for reviewing readings, ranges, and trends",
-      "Role-based access for providers, administrators, and operational users",
-      "Report workflows for clinical review and longitudinal glucose analysis",
-      "User and platform configuration tools for administrative operations",
-      "Shared backend integration with the Optimus CGM mobile application",
-    ],
-  },
-  {
-    slug: "labelsr-fashion",
-    title: "Label SR — Compliance & Operations Platform",
-    category: "erp",
-    description:
-      "A complete custom digital solution for a compliance-focused labeling & packaging business — eliminating paper processes, speeding up audits, and driving sales growth.",
-    problem:
-      "The client had no digital presence and depended entirely on manual, paper-based processes to plan and manage operations — a costly and error-prone approach in an industry where labeling accuracy and audit-readiness are critical.",
-    solution:
-      "Designed and built a complete, custom digital solution tailored specifically to their labeling and compliance workflows — at a fraction of typical enterprise pricing — automating processes that were previously entirely manual.",
-    technologies: ["PHP", "MySQL", "Tailwind CSS", "JavaScript", "DOMPDF", "Compliance Engine"],
-    duration: "3 months",
-    thumbnail: "/projects/labelsr-thumb.png",
-    featured: true,
-    highlightsTitle: "Platform Highlights",
-    highlights: [
-      { value: "100%", label: "Automated Operations" },
-      { value: "Audit-Ready", label: "Centralized Digital Records" },
-      { value: "Zero Paper", label: "Paperless Workflows" },
-      { value: "Sales Growth", label: "Competitive Market Impact" },
-    ],
-    capabilitiesTitle: "Platform Capabilities",
-    capabilities: [
-      "Eliminated pen-and-paper processes, automating day-to-day operations completely",
-      "Significantly reduced time spent on manual documentation and record preparation",
-      "Centralized digital records for faster, stress-free compliance and audit readiness",
-      "Contributed to strong sales growth and competitive advantage in their market",
-      "Custom workflow automation designed specifically around packaging and labeling rules",
-      "Role-based access control for operations, quality check, and administration teams",
-    ],
-  },
 ];
 
 export function getProjectBySlug(slug: string): Project | undefined {

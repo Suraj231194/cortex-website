@@ -13,11 +13,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Cortex Analytics — Software for Complex Operations",
+    default: "Cortex Analytics — Engineering Ambitious Business Systems",
     template: "%s | Cortex Analytics",
   },
   description:
-    "Cortex Analytics builds scalable software platforms for healthcare, diagnostics, manufacturing, and commerce, turning fragmented workflows into connected operations.",
+    "Cortex Analytics engineers precise, scalable software systems for ambitious businesses across healthcare, manufacturing, commerce, and beyond.",
   keywords: [
     "AI Development",
     "ERP Solutions",
@@ -31,15 +31,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "Cortex Analytics",
-    title: "Cortex Analytics — Software for Complex Operations",
+    title: "Cortex Analytics — Engineering Ambitious Business Systems",
     description:
-      "Scalable software platforms for healthcare, diagnostics, manufacturing, and commerce, built to simplify complex operations.",
+      "Precise, scalable software systems engineered for ambitious businesses.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cortex Analytics — Software for Complex Operations",
+    title: "Cortex Analytics — Engineering Ambitious Business Systems",
     description:
-      "Scalable software platforms for healthcare, diagnostics, manufacturing, and commerce, built to simplify complex operations.",
+      "Precise, scalable software systems engineered for ambitious businesses.",
   },
   robots: {
     index: true,
