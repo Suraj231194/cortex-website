@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import emailjs from "@emailjs/browser";
 import { motion } from "motion/react";
 import PremiumPageHero from "@/components/ui/PremiumPageHero";
 import ScrollReveal from "@/components/ui/ScrollReveal";
@@ -18,16 +19,41 @@ import {
   Sparkles,
 } from "lucide-react";
 
+const EMAILJS_SERVICE_ID = "service_vrsevvj";
+const EMAILJS_TEMPLATE_ID = "template_69rn5pq";
+const EMAILJS_PUBLIC_KEY = "_I9kqld3O1lvNiZOy";
+
 export default function ContactPage() {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    // Silently accept bot submissions caught by the honeypot without using quota.
+    if (formData.get("website")) {
+      form.reset();
+      setStatus("success");
+      return;
+    }
+
     setStatus("sending");
 
-    // Simulate form submission (replace with EmailJS integration)
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setStatus("success");
+    try {
+      await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form, {
+        publicKey: EMAILJS_PUBLIC_KEY,
+        limitRate: {
+          id: "cortex-contact-form",
+          throttle: 10000,
+        },
+      });
+      form.reset();
+      setStatus("success");
+    } catch (error) {
+      console.error("EmailJS contact form submission failed", error);
+      setStatus("error");
+    }
   };
 
   const inputClasses =
@@ -160,6 +186,16 @@ export default function ContactPage() {
                       </motion.div>
                     ) : (
                       <form onSubmit={handleSubmit} className="space-y-5">
+                        <div className="hidden" aria-hidden="true">
+                          <label htmlFor="website">Website</label>
+                          <input
+                            type="text"
+                            id="website"
+                            name="website"
+                            tabIndex={-1}
+                            autoComplete="off"
+                          />
+                        </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                           <div>
                             <label
@@ -224,22 +260,22 @@ export default function ContactPage() {
                             <option value="" className="bg-surface">
                               Select a service
                             </option>
-                            <option value="ai" className="bg-surface">
+                            <option value="AI Development" className="bg-surface">
                               AI Development
                             </option>
-                            <option value="erp" className="bg-surface">
+                            <option value="ERP Development" className="bg-surface">
                               ERP Development
                             </option>
-                            <option value="flutter" className="bg-surface">
+                            <option value="Flutter Apps" className="bg-surface">
                               Flutter Apps
                             </option>
-                            <option value="web" className="bg-surface">
+                            <option value="Web Applications" className="bg-surface">
                               Web Applications
                             </option>
-                            <option value="cloud" className="bg-surface">
+                            <option value="Cloud Solutions" className="bg-surface">
                               Cloud Solutions
                             </option>
-                            <option value="other" className="bg-surface">
+                            <option value="Other" className="bg-surface">
                               Other
                             </option>
                           </select>
@@ -262,9 +298,22 @@ export default function ContactPage() {
                         </div>
 
                         {status === "error" && (
-                          <div className="flex items-center gap-2 text-red-400 text-sm">
+                          <div
+                            role="alert"
+                            aria-live="polite"
+                            className="flex items-center gap-2 text-red-400 text-sm"
+                          >
                             <AlertCircle className="w-4 h-4" />
-                            Something went wrong. Please try again.
+                            <span>
+                              Something went wrong. Please try again or email us at{" "}
+                              <a
+                                href="mailto:contactcortexanalytics@gmail.com"
+                                className="underline underline-offset-2"
+                              >
+                                contactcortexanalytics@gmail.com
+                              </a>
+                              .
+                            </span>
                           </div>
                         )}
 
