@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Mail } from "lucide-react";
 import { motion } from "motion/react";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import MagneticButton from "@/components/effects/MagneticButton";
 import CortexMark from "@/components/brand/CortexMark";
 
@@ -44,8 +44,14 @@ const socialLinks = [
   },
   {
     icon: FaWhatsapp,
-    href: "https://wa.me/918810927291",
+    href: "https://wa.me/916388673136",
     label: "WhatsApp",
+    external: true,
+  },
+  {
+    icon: FaInstagram,
+    href: "https://www.instagram.com/cortexanalytics?mdxt=amhmM3RsMDl0OHFm",
+    label: "Instagram",
     external: true,
   },
 ];
