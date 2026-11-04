@@ -108,10 +108,10 @@ export default function ContactPage() {
                             Phone
                           </p>
                           <a
-                            href="tel:+918810927291"
+                            href="tel:+916388673136"
                             className="text-sm text-text-secondary transition-colors hover:text-brand-primary-light"
                           >
-                            8810927291
+                            6388673136
                           </a>
                         </div>
                       </div>
